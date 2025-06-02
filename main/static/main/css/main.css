@@ -1,0 +1,110 @@
+body {
+    background: #755020;
+}
+
+aside {
+    float: left;
+    position: fixed;
+    left: 0px;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 500vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+
+}
+
+aside img {
+    width: 200px;
+    float: left;
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 1px;
+    font-weight: bold;
+    position: relative;
+    top: +10px;
+    color: #FFFFFF;
+    font-family: Comic Sans MS;
+}
+
+aside h3 {
+    margin-top: 50px;
+    font-size: 28px;
+    color: #FFFFFF
+}
+
+aside ul {list-style: none}
+aside ul li {
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: transform .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+#features {
+    float: right;
+    color: #FFFFFF;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+     clear: booth;
+}
+
+#features h1 {font-size: 50px; font-family: Comic Sans MS;}
+#features p {max-width: 700px; margin: 20px auto;}
+#features h2 {font-size: 25px; max-width: 700px; margin: 20px auto; font-family: Comic Sans MS;}
+#features h3 {font-size: 25px; max-width: 700px; margin: 20px auto; font-family: Comic Sans MS; margin-top:50px;}
+.alert-warning {
+    color: #2c2c2c;
+    display: inline-block;
+    background: #CCC7C1;
+    width: 55%;
+    margin: 30px 0%;
+    text-align: center;
+}
+
+.phone{
+display:block;
+font-size: 30px;
+}
+
+.photo-wrap{
+    width: 94%;
+    padding: 0 5%;
+    margin: 0 auto;
+    background: #FFFFFF;
+}
+
+.article{
+    float: right;
+    color: #FFFFFF;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+    clear: booth;
+}
+
+.article p {max-width: 95%; margin: 20px auto;}
+.article h1 {font-size: 50px; font-family: Comic Sans MS;}
+.btn{
+    display:block;
+    width: 30%;
+    margin: 0 auto;
+
+}
+
+
+form {
+
+    margin-top: 50px;
+
+}
