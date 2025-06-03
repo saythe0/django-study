@@ -13,17 +13,20 @@
         <div class="container-prod">
 
             <div class="card-prod">
-                <img src="{% static 'main/images/logo.jpg' %}" alt="logo" class="card-img-top-prod">
-                <span>
-                    <img src="{% static 'main/images/logo.jpg' %}" alt="logo" class="card-img-top-prod">
-                </span>
+                {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="logo" class="card-img-top-prod">
+                {% endif %}
                 <div class="card-body">
-                    <p class="card-title">Название</p>
-                    <p class="card-text">+10 к силе против босса</p>
-                    <p class="product_id">id: 2345</p>
+                    <p class="card-title">{{ product.name }}</p>
+                    <p class="card-text">{{ product.description }}</p>
+                    <p class="product_id">id: {{ product.id }}</p>
                     <div class="d-flex justify-content-between">
-                        <p><s>100</s> $</p>
-                        <p><strong>90.00 $</strong></p>
+                        {% if product.discount %}
+                            <p><s>{{ product.price }}</s> $</p>
+                            <p><strong>{{ product.sell_price }} $</strong></p>
+                        {% else %}
+                            <p><strong>{{ product.price }} $</strong></p>
+                        {% endif %}
                         <div class="bron">
                             <a href="#" class="btn btn-dark add-to-cart">Забронировать столик</a>
                         </div>

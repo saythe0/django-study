@@ -18,7 +18,7 @@
                         <img src="{{ product.image.url }}" alt="logo" class="card-img-top">
                     {% endif %}
                     <div class="card-body">
-                        <a href="{% url 'catalog:product' %}">
+                        <a href="{% url 'catalog:product' product.slug %}">
                             <p class="card-title">{{ product.name }}</p>
                         </a>
                         <p class="card-text">{{ product.description }}</p>
