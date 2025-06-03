@@ -12,18 +12,22 @@
 
         <div class="container">
 
-            {% for product in goods %}
+            {% for product in products %}
             	<div class="card">
-                    <img src="{% static 'main/images/logo.jpg' %}" alt="logo" class="card-img-top">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="logo" class="card-img-top">
+                    {% endif %}
                     <div class="card-body">
                         <a href="{% url 'catalog:product' %}">
-                            <p class="card-title">Название</p>
+                            <p class="card-title">{{ product.name }}</p>
                         </a>
-                        <p class="card-text">+10 к силе против босса</p>
-                        <p class="product_id">id: 2345</p>
+                        <p class="card-text">{{ product.description }}</p>
+                        <p class="product_id">id: {{ product.id }}</p>
                         <div class="d-flex justify-content-between">
-                            <p><s>100</s> $</p>
-                            <p><strong>90.00 $</strong></p>
+                            {% if product.discount %}
+                            	<p><s>{{ product.discount }}</s> $</p>
+                            {% endif %}
+                            <p><strong>{{ product.price }} $</strong></p>
                             <span class="badge bg-warning text-dark"><strong>Скидка 10.00 %</strong></span>
                         </div>
                     </div>
